@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/road-signs#"
+     xml:base="http://example.org/road-signs"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/road-signs"/>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://example.org/road-signs#RoadSign -->
+    <owl:Class rdf:about="http://example.org/road-signs#RoadSign"/>
+
+    <!-- Section A: Danger Warning Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#DangerWarningSign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+        <owl:disjointWith rdf:resource="http://example.org/road-signs#PrioritySign"/>
+        <owl:disjointWith rdf:resource="http://example.org/road-signs#ProhibitorySign"/>
+        <owl:disjointWith rdf:resource="http://example.org/road-signs#MandatorySign"/>
+        <owl:disjointWith rdf:resource="http://example.org/road-signs#InformationSign"/>
+    </owl:Class>
+
+    <!-- Specific Danger Warning Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#A1a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A1b"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A1c"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A1d"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A2a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A2b"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A3a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A4a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A5"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A25"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#A28a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#DangerWarningSign"/></owl:Class>
+
+    <!-- Section B: Priority Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#PrioritySign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/road-signs#B1"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B2a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B2b"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B3"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B4"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B5"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#B6"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#PrioritySign"/></owl:Class>
+
+    <!-- Section C: Prohibitory or Restrictive Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#ProhibitorySign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/road-signs#C1a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#ProhibitorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#C2"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#ProhibitorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#C3a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#ProhibitorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#C14"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#ProhibitorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#C17a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#ProhibitorySign"/></owl:Class>
+
+    <!-- Section D: Mandatory Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#MandatorySign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/road-signs#D1a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#MandatorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#D2"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#MandatorySign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#D4"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#MandatorySign"/></owl:Class>
+
+    <!-- Section E-G: Information Signs -->
+    <owl:Class rdf:about="http://example.org/road-signs#InformationSign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/road-signs#E1a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#InformationSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#F2"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#InformationSign"/></owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#G1a"><rdfs:subClassOf rdf:resource="http://example.org/road-signs#InformationSign"/></owl:Class>
+
+    <!-- Zonal and Temporary Classifications -->
+    <owl:Class rdf:about="http://example.org/road-signs#TemporaryRoadSign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/road-signs#PermanentRoadSign">
+        <rdfs:subClassOf rdf:resource="http://example.org/road-signs#RoadSign"/>
+        <owl:disjointWith rdf:resource="http://example.org/road-signs#TemporaryRoadSign"/>
+    </owl:Class>
+
+</rdf:RDF>

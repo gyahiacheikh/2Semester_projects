@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+     
+    <owl:Ontology rdf:about="http://www.w3.org/2002/07/owl">
+        <rdfs:comment>OWL2 Taxonomy of Road Signs based on the Vienna Convention on Road Signs and Signals, Part I, Annex 1</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Root Class -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#RoadSign">
+        <rdfs:label>RoadSign</rdfs:label>
+    </owl:Class>
+
+    <!-- Top Level Categories -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DangerWarningSign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RoadSign"/>
+        <rdfs:label>DangerWarningSign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#RegulatorySign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RoadSign"/>
+        <rdfs:label>RegulatorySign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#InformativeSign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RoadSign"/>
+        <rdfs:label>InformativeSign</rdfs:label>
+    </owl:Class>
+
+    <!-- Disjointness Axioms for Top Level Categories -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DangerWarningSign">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#RegulatorySign"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#InformativeSign"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#RegulatorySign">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#InformativeSign"/>
+    </owl:Class>
+
+    <!-- ==================== REGULATORY SIGN SUBCLASSES ==================== -->
+    
+    <!-- Priority Signs -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#PrioritySign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RegulatorySign"/>
+        <rdfs:label>PrioritySign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B1_GiveWay">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B1_GiveWay</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B2_Stop">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B2_Stop</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B2a_Stop_Octagonal">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#B2_Stop"/>
+        <rdfs:label>B2a_Stop_Octagonal</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B2b_Stop_Circular">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#B2_Stop"/>
+        <rdfs:label>B2b_Stop_Circular</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B3_PriorityRoad">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B3_PriorityRoad</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B4_EndOfPriority">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B4_EndOfPriority</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B5_PriorityForOncomingTraffic">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B5_PriorityForOncomingTraffic</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#B6_PriorityOverOncomingTraffic">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#PrioritySign"/>
+        <rdfs:label>B6_PriorityOverOncomingTraffic</rdfs:label>
+    </owl:Class>
+
+    <!-- Prohibitory or Restrictive Signs -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#ProhibitorySign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RegulatorySign"/>
+        <rdfs:label>ProhibitorySign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C1_NoEntry">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C1_NoEntry</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C1a_NoEntry_Rectangular">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C1_NoEntry"/>
+        <rdfs:label>C1a_NoEntry_Rectangular</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C1b_NoEntry_Circular">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C1_NoEntry"/>
+        <rdfs:label>C1b_NoEntry_Circular</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C2_ClosedToAllVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C2_ClosedToAllVehicles</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3a_NoPowerDrivenVehiclesExceptTwoWheeledMotorcycles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3a_NoPowerDrivenVehiclesExceptTwoWheeledMotorcycles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3b_NoMotorcycles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3b_NoMotorcycles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3c_NoCycles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3c_NoCycles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3d_NoMopeds">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3d_NoMopeds</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3e_NoGoodsVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3e_NoGoodsVehicles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3f_NoVehicleDrawingTrailerOtherThanSemiTrailer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3f_NoVehicleDrawingTrailerOtherThanSemiTrailer</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3g_NoVehicleDrawingTrailer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3g_NoVehicleDrawingTrailer</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3h_NoVehiclesCarryingDangerousGoods">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3h_NoVehiclesCarryingDangerousGoods</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3i_NoPedestrians">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3i_NoPedestrians</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3j_NoAnimalDrawnVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3j_NoAnimalDrawnVehicles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3k_NoHandcarts">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3k_NoHandcarts</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C3l_NoPowerDrivenAgriculturalVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C3l_NoPowerDrivenAgriculturalVehicles</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C4a_NoPowerDrivenVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C4a_NoPowerDrivenVehicles</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C4b_NoPowerDrivenVehiclesOrAnimalDrawnVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C4b_NoPowerDrivenVehiclesOrAnimalDrawnVehicles</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C5_NoEntryForVehiclesExceedingWidth">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C5_NoEntryForVehiclesExceedingWidth</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C6_NoEntryForVehiclesExceedingHeight">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C6_NoEntryForVehiclesExceedingHeight</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C7_NoEntryForVehiclesExceedingLadenMass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C7_NoEntryForVehiclesExceedingLadenMass</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C8_NoEntryForVehiclesExceedingAxleMass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C8_NoEntryForVehiclesExceedingAxleMass</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C9_NoEntryForVehiclesExceedingLength">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C9_NoEntryForVehiclesExceedingLength</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C10_DrivingTooCloseProhibited">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C10_DrivingTooCloseProhibited</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C11a_NoLeftTurn">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C11a_NoLeftTurn</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C11b_NoRightTurn">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C11b_NoRightTurn</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C12_NoUTurns">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C12_NoUTurns</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C13a_OvertakingProhibited">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C13a_OvertakingProhibited</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C13b_OvertakingByGoodsVehiclesProhibited">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C13b_OvertakingByGoodsVehiclesProhibited</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C14_MaximumSpeedLimit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C14_MaximumSpeedLimit</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C15_UseOfAudibleWarningDevicesProhibited">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C15_UseOfAudibleWarningDevicesProhibited</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C16_PassingWithoutStoppingProhibited">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C16_PassingWithoutStoppingProhibited</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C17_EndOfProhibition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C17_EndOfProhibition</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C17a_EndOfAllLocalProhibitions">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C17_EndOfProhibition"/>
+        <rdfs:label>C17a_EndOfAllLocalProhibitions</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C17b_EndOfSpeedLimit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C17_EndOfProhibition"/>
+        <rdfs:label>C17b_EndOfSpeedLimit</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C17c_EndOfOvertakingProhibition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C17_EndOfProhibition"/>
+        <rdfs:label>C17c_EndOfOvertakingProhibition</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C17d_EndOfOvertakingProhibitionForGoodsVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#C17_EndOfProhibition"/>
+        <rdfs:label>C17d_EndOfOvertakingProhibitionForGoodsVehicles</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C18_NoParking">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C18_NoParking</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C19_NoStanding">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C19_NoStanding</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C20a_RestrictedParkingZoneBegin">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C20a_RestrictedParkingZoneBegin</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#C20b_RestrictedParkingZoneEnd">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#ProhibitorySign"/>
+        <rdfs:label>C20b_RestrictedParkingZoneEnd</rdfs:label>
+    </owl:Class>
+
+    <!-- Mandatory Signs -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#MandatorySign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#RegulatorySign"/>
+        <rdfs:label>MandatorySign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D1a_DirectionToBeFollowed">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D1a_DirectionToBeFollowed</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D1b_DirectionToBeFollowed_Alternative">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D1b_DirectionToBeFollowed_Alternative</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D2_PassThisSide">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D2_PassThisSide</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D3_CompulsoryRoundabout">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D3_CompulsoryRoundabout</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D4_CompulsoryCycleTrack">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D4_CompulsoryCycleTrack</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D5_CompulsoryFootpath">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D5_CompulsoryFootpath</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D6_CompulsoryTrackForRidersOnHorseback">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D6_CompulsoryTrackForRidersOnHorseback</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D7_CompulsoryMinimumSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D7_CompulsoryMinimumSpeed</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D8_EndOfCompulsoryMinimumSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D8_EndOfCompulsoryMinimumSpeed</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D9_SnowChainsCompulsory">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D9_SnowChainsCompulsory</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D10a_CompulsoryDirectionForDangerousGoods_Ahead">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D10a_CompulsoryDirectionForDangerousGoods_Ahead</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D10b_CompulsoryDirectionForDangerousGoods_Right">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D10b_CompulsoryDirectionForDangerousGoods_Right</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D10c_CompulsoryDirectionForDangerousGoods_Left">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D10c_CompulsoryDirectionForDangerousGoods_Left</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D11a_CombinedCycleAndFootpath_Joint">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D11a_CombinedCycleAndFootpath_Joint</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#D11b_CombinedCycleAndFootpath_Separated">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#MandatorySign"/>
+        <rdfs:label>D11b_CombinedCycleAndFootpath_Separated</rdfs:label>
+    </owl:Class>
+
+    <!-- ==================== INFORMATIVE SIGN SUBCLASSES ==================== -->
+    
+    <!-- Special Regulation Signs -->
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#SpecialRegulationSign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#InformativeSign"/>
+        <rdfs:label>SpecialRegulationSign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E1a_CompulsoryMinimumSpeedApplyingToDifferentLanes">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E1a_CompulsoryMinimumSpeedApplyingToDifferentLanes</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E1b_CompulsoryMinimumSpeedApplyingToOneLane">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E1b_CompulsoryMinimumSpeedApplyingToOneLane</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E1c_SpeedLimitsApplyingToDifferentLanes">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E1c_SpeedLimitsApplyingToDifferentLanes</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E2a_LaneReservedForBuses_Panel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E2a_LaneReservedForBuses_Panel</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E2b_LaneReservedForBuses_Arrow">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E2b_LaneReservedForBuses_Arrow</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E3a_OneWay_Perpendicular">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E3a_OneWay_Perpendicular</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E3b_OneWay_Parallel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E3b_OneWay_Parallel</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E4_PreselectionSign">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E4_PreselectionSign</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E5a_Motorway">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E5a_Motorway</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E5b_EndOfMotorway">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E5b_EndOfMotorway</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#E6a_RoadForMotorVehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#SpecialRegulationSign"/>
+        <rdfs:label>E6a_RoadForMotorVehicles</rdfs:label>
+    </owl:Class

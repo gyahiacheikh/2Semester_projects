@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/vienna-road-signs#"
+     xml:base="http://example.org/vienna-road-signs"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://example.org/vienna-road-signs"/>
+
+  <owl:Class rdf:ID="RoadSign"/>
+
+  <owl:Class rdf:ID="DangerWarningSign">
+    <rdfs:subClassOf rdf:resource="#RoadSign"/>
+    <owl:disjointWith rdf:resource="#RegulatorySign"/>
+    <owl:disjointWith rdf:resource="#InformationSign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RegulatorySign">
+    <rdfs:subClassOf rdf:resource="#RoadSign"/>
+    <owl:disjointWith rdf:resource="#InformationSign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InformationSign">
+    <rdfs:subClassOf rdf:resource="#RoadSign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PrioritySign">
+    <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ProhibitoryOrRestrictiveSign">
+    <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MandatorySign">
+    <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpecialRegulationSign">
+    <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InformationFacilityOrServiceSign">
+    <rdfs:subClassOf rdf:resource="#InformationSign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DirectionPositionOrIndicationSign">
+    <rdfs:subClassOf rdf:resource="#InformationSign"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AdditionalPanel">
+    <rdfs:subClassOf rdf:resource="#InformationSign"/>
+  </owl:Class>
+
+  <!-- Sample full hierarchy (representative but complete enough for Protégé visibility) -->
+  <owl:Class rdf:ID="A1a"><rdfs:subClassOf rdf:resource="#DangerWarningSign"/></owl:Class>
+  <owl:Class rdf:ID="A1b"><rdfs:subClassOf rdf:resource="#DangerWarningSign"/></owl:Class>
+  <owl:Class rdf:ID="A2a"><rdfs:subClassOf rdf:resource="#DangerWarningSign"/></owl:Class>
+  <owl:Class rdf:ID="A2b"><rdfs:subClassOf rdf:resource="#DangerWarningSign"/></owl:Class>
+  <owl:Class rdf:ID="A3"><rdfs:subClassOf rdf:resource="#DangerWarningSign"/></owl:Class>
+
+  <owl:Class rdf:ID="B1"><rdfs:subClassOf rdf:resource="#PrioritySign"/></owl:Class>
+  <owl:Class rdf:ID="B2"><rdfs:subClassOf rdf:resource="#PrioritySign"/></owl:Class>
+  <owl:Class rdf:ID="B2a"><rdfs:subClassOf rdf:resource="#B2"/></owl:Class>
+  <owl:Class rdf:ID="B2b"><rdfs:subClassOf rdf:resource="#B2"/></owl:Class>
+  <owl:Class rdf:ID="B3"><rdfs:subClassOf rdf:resource="#PrioritySign"/></owl:Class>
+  <owl:Class rdf:ID="B4"><rdfs:subClassOf rdf:resource="#PrioritySign"/></owl:Class>
+
+  <owl:Class rdf:ID="C1"><rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/></owl:Class>
+  <owl:Class rdf:ID="C2"><rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/></owl:Class>
+  <owl:Class rdf:ID="C3"><rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/></owl:Class>
+
+  <owl:Class rdf:ID="D1"><rdfs:subClassOf rdf:resource="#MandatorySign"/></owl:Class>
+  <owl:Class rdf:ID="D2"><rdfs:subClassOf rdf:resource="#MandatorySign"/></owl:Class>
+
+</rdf:RDF>
