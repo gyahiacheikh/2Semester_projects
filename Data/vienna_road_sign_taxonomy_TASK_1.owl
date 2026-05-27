@@ -1,675 +1,695 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns="http://example.org/vienna-road-sign-taxonomy#"
-     xml:base="http://example.org/vienna-road-sign-taxonomy"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/vienna-road-signs#"
+     xml:base="http://example.org/vienna-road-signs"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <owl:Ontology rdf:about="http://example.org/vienna-road-sign-taxonomy">
-    <rdfs:comment xml:lang="en">OWL2 class taxonomy of road signs based on Part I, Annex 1, of the Vienna Convention on Road Signs and Signals. Contains classes, subclass axioms, labels, comments, and disjointness axioms only.</rdfs:comment>
-  </owl:Ontology>
+  <owl:Ontology rdf:about="http://example.org/vienna-road-signs"/>
   <owl:Class rdf:about="#RoadSign">
-    <rdfs:label xml:lang="en">Road sign</rdfs:label>
+    <rdfs:label>Road sign</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#DangerWarningSign">
-    <rdfs:label xml:lang="en">Danger warning sign</rdfs:label>
+    <rdfs:label>Danger warning sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RoadSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RegulatorySign">
-    <rdfs:label xml:lang="en">Regulatory sign</rdfs:label>
+    <rdfs:label>Regulatory sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RoadSign"/>
   </owl:Class>
   <owl:Class rdf:about="#InformativeSign">
-    <rdfs:label xml:lang="en">Informative sign</rdfs:label>
+    <rdfs:label>Informative sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RoadSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PrioritySign">
-    <rdfs:label xml:lang="en">Priority sign</rdfs:label>
+    <rdfs:label>Priority sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#ProhibitoryOrRestrictiveSign">
-    <rdfs:label xml:lang="en">Prohibitory or restrictive sign</rdfs:label>
+    <rdfs:label>Prohibitory or restrictive sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#MandatorySign">
-    <rdfs:label xml:lang="en">Mandatory sign</rdfs:label>
+    <rdfs:label>Mandatory sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#SpecialRegulationSign">
-    <rdfs:label xml:lang="en">Special regulation sign</rdfs:label>
+    <rdfs:label>Special regulation sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#InformationFacilitiesOrServiceSign">
-    <rdfs:label xml:lang="en">Information, facilities or service sign</rdfs:label>
+    <rdfs:label>Information, facilities or service sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformativeSign"/>
   </owl:Class>
   <owl:Class rdf:about="#DirectionPositionOrIndicationSign">
-    <rdfs:label xml:lang="en">Direction, position or indication sign</rdfs:label>
+    <rdfs:label>Direction, position or indication sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformativeSign"/>
   </owl:Class>
   <owl:Class rdf:about="#AdditionalPanel">
-    <rdfs:label xml:lang="en">Additional panel</rdfs:label>
+    <rdfs:label>Additional panel</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformativeSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#AdvanceDirectionSign">
-    <rdfs:label xml:lang="en">Advance direction sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#DirectionSign">
-    <rdfs:label xml:lang="en">Direction sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#RoadIdentificationSign">
-    <rdfs:label xml:lang="en">Road identification sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#PlaceIdentificationSign">
-    <rdfs:label xml:lang="en">Place identification sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#ConfirmatorySign">
-    <rdfs:label xml:lang="en">Confirmatory sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#IndicationSign">
-    <rdfs:label xml:lang="en">Indication sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
-  </owl:Class>
   <owl:Class rdf:about="#DangerousBendOrBendsSign">
-    <rdfs:label xml:lang="en">Dangerous bend or bends sign</rdfs:label>
+    <rdfs:label>Dangerous bend or bends sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#DangerousDescentSign">
-    <rdfs:label xml:lang="en">Dangerous descent sign</rdfs:label>
+    <rdfs:label>Dangerous descent sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#SteepAscentSign">
-    <rdfs:label xml:lang="en">Steep ascent sign</rdfs:label>
+    <rdfs:label>Steep ascent sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CarriagewayNarrowsSign">
-    <rdfs:label xml:lang="en">Carriageway narrows sign</rdfs:label>
+    <rdfs:label>Carriageway narrows sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#SwingBridgeSign">
-    <rdfs:label xml:lang="en">Swing bridge sign</rdfs:label>
+    <rdfs:label>Swing bridge sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#RoadLeadsOntoQuayOrRiverBankSign">
-    <rdfs:label xml:lang="en">Road leads on to quay or river bank sign</rdfs:label>
+  <owl:Class rdf:about="#RoadLeadsOnToQuayOrRiverBankSign">
+    <rdfs:label>Road leads on to quay or river bank sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#UnevenRoadSign">
-    <rdfs:label xml:lang="en">Uneven road sign</rdfs:label>
+    <rdfs:label>Uneven road sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#DangerousShouldersSign">
-    <rdfs:label xml:lang="en">Dangerous shoulders sign</rdfs:label>
+    <rdfs:label>Dangerous shoulders sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#SlipperyRoadSign">
-    <rdfs:label xml:lang="en">Slippery road sign</rdfs:label>
+    <rdfs:label>Slippery road sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#LooseGravelSign">
-    <rdfs:label xml:lang="en">Loose gravel sign</rdfs:label>
+    <rdfs:label>Loose gravel sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#FallingRocksSign">
-    <rdfs:label xml:lang="en">Falling rocks sign</rdfs:label>
+    <rdfs:label>Falling rocks sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PedestrianCrossingWarningSign">
-    <rdfs:label xml:lang="en">Pedestrian crossing warning sign</rdfs:label>
+    <rdfs:label>Pedestrian crossing warning sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#ChildrenSign">
-    <rdfs:label xml:lang="en">Children sign</rdfs:label>
+    <rdfs:label>Children sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CyclistsEnteringOrCrossingSign">
-    <rdfs:label xml:lang="en">Cyclists entering or crossing sign</rdfs:label>
+    <rdfs:label>Cyclists entering or crossing sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CattleOrOtherAnimalsCrossingSign">
-    <rdfs:label xml:lang="en">Cattle or other animals crossing sign</rdfs:label>
+    <rdfs:label>Cattle or other animals crossing sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#RoadWorksSign">
-    <rdfs:label xml:lang="en">Road works sign</rdfs:label>
+  <owl:Class rdf:about="#RoadWorksWarningSign">
+    <rdfs:label>Road works warning sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#LightSignalsSign">
-    <rdfs:label xml:lang="en">Light signals sign</rdfs:label>
+    <rdfs:label>Light signals sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#IntersectionGeneralPriorityRuleSign">
-    <rdfs:label xml:lang="en">Intersection where priority is prescribed by the general priority rule sign</rdfs:label>
+  <owl:Class rdf:about="#IntersectionWherePriorityIsPrescribedByGeneralPriorityRuleSign">
+    <rdfs:label>Intersection where priority is prescribed by the general priority rule sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#IntersectionWithRoadUsersMustGiveWaySign">
-    <rdfs:label xml:lang="en">Intersection with a road the users of which must give way sign</rdfs:label>
+  <owl:Class rdf:about="#IntersectionWithRoadWhoseUsersMustGiveWaySign">
+    <rdfs:label>Intersection with a road the users of which must give way sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#IntersectionWhereDriversMustGiveWaySign">
-    <rdfs:label xml:lang="en">Intersection with a road to whose users drivers must give way sign</rdfs:label>
+  <owl:Class rdf:about="#IntersectionWithRoadToWhoseUsersDriversMustGiveWaySign">
+    <rdfs:label>Intersection with a road to whose users drivers must give way sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RoundaboutWarningSign">
-    <rdfs:label xml:lang="en">Roundabout warning sign</rdfs:label>
+    <rdfs:label>Roundabout warning sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#IntersectionTrafficRegulatedByLightSignalSign">
-    <rdfs:label xml:lang="en">Intersection where traffic is regulated by a light signal sign</rdfs:label>
+  <owl:Class rdf:about="#IntersectionWhereTrafficIsRegulatedByLightSignalSign">
+    <rdfs:label>Intersection where traffic is regulated by a light signal sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#TwoWayTrafficSign">
-    <rdfs:label xml:lang="en">Two-way traffic sign</rdfs:label>
+    <rdfs:label>Two-way traffic sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#TrafficCongestionSign">
-    <rdfs:label xml:lang="en">Traffic congestion sign</rdfs:label>
+    <rdfs:label>Traffic congestion sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#LevelCrossingWithGatesSign">
-    <rdfs:label xml:lang="en">Level-crossing with gates sign</rdfs:label>
+    <rdfs:label>Level-crossing with gates sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#OtherLevelCrossingSign">
-    <rdfs:label xml:lang="en">Other level-crossing sign</rdfs:label>
+    <rdfs:label>Other level-crossing sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#IntersectionWithTramwayLineSign">
-    <rdfs:label xml:lang="en">Intersection with a tramway line sign</rdfs:label>
+    <rdfs:label>Intersection with a tramway line sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#ImmediateVicinityOfLevelCrossingSign">
-    <rdfs:label xml:lang="en">Sign to be placed in the immediate vicinity of level-crossings</rdfs:label>
+    <rdfs:label>Sign to be placed in the immediate vicinity of level-crossings</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#ApproachToLevelCrossingOrSwingBridgeSign">
-    <rdfs:label xml:lang="en">Additional sign at approaches to level-crossings or swing bridges</rdfs:label>
+  <owl:Class rdf:about="#ApproachToLevelCrossingOrSwingBridgeAdditionalSign">
+    <rdfs:label>Additional sign at approaches to level-crossings or swing bridges</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#AirfieldSign">
-    <rdfs:label xml:lang="en">Airfield sign</rdfs:label>
+    <rdfs:label>Airfield sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CrossWindSign">
-    <rdfs:label xml:lang="en">Cross-wind sign</rdfs:label>
+    <rdfs:label>Cross-wind sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#OtherDangersSign">
-    <rdfs:label xml:lang="en">Other dangers sign</rdfs:label>
+    <rdfs:label>Other dangers sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
   </owl:Class>
   <owl:Class rdf:about="#GiveWaySign">
-    <rdfs:label xml:lang="en">GIVE WAY sign</rdfs:label>
+    <rdfs:label>GIVE WAY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#StopSign">
-    <rdfs:label xml:lang="en">STOP sign</rdfs:label>
+    <rdfs:label>STOP sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#PriorityRoadSign">
-    <rdfs:label xml:lang="en">PRIORITY ROAD sign</rdfs:label>
+    <rdfs:label>PRIORITY ROAD sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfPrioritySign">
-    <rdfs:label xml:lang="en">END OF PRIORITY sign</rdfs:label>
+    <rdfs:label>END OF PRIORITY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#PriorityForOncomingTrafficSign">
-    <rdfs:label xml:lang="en">PRIORITY FOR ONCOMING TRAFFIC sign</rdfs:label>
+    <rdfs:label>PRIORITY FOR ONCOMING TRAFFIC sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#PriorityOverOncomingTrafficSign">
-    <rdfs:label xml:lang="en">Priority over oncoming traffic sign</rdfs:label>
+    <rdfs:label>Priority over oncoming traffic sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#PrioritySign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntrySign">
-    <rdfs:label xml:lang="en">NO ENTRY sign</rdfs:label>
+    <rdfs:label>NO ENTRY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#ClosedToAllVehiclesInBothDirectionsSign">
-    <rdfs:label xml:lang="en">CLOSED TO ALL VEHICLES IN BOTH DIRECTIONS sign</rdfs:label>
+    <rdfs:label>CLOSED TO ALL VEHICLES IN BOTH DIRECTIONS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForPowerDrivenVehicleExceptTwoWheeledMotorCyclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR ANY POWER DRIVEN VEHICLE EXCEPT TWO-WHEELED MOTOR CYCLES WITHOUT SIDE-CAR sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForAnyPowerDrivenVehicleExceptTwoWheeledMotorCyclesWithoutSideCarSign">
+    <rdfs:label>NO ENTRY FOR ANY POWER DRIVEN VEHICLE EXCEPT TWO-WHEELED MOTOR CYCLES WITHOUT SIDE-CAR sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForMotorCyclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR MOTOR CYCLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR MOTOR CYCLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForCyclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR CYCLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR CYCLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForMopedsSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR MOPEDS sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR MOPEDS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForGoodsVehiclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR GOODS VEHICLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR GOODS VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForPowerDrivenVehicleDrawingTrailerOtherThanSemiTrailerOrSingleAxleTrailerSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR ANY POWER-DRIVEN VEHICLE DRAWING A TRAILER OTHER THAN A SEMI-TRAILER OR A SINGLE AXLE TRAILER sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForAnyPowerDrivenVehicleDrawingATrailerOtherThanSemiTrailerOrSingleAxleTrailerSign">
+    <rdfs:label>NO ENTRY FOR ANY POWER-DRIVEN VEHICLE DRAWING A TRAILER OTHER THAN A SEMI-TRAILER OR A SINGLE AXLE TRAILER sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForPowerDrivenVehicleDrawingTrailerSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR ANY POWER-DRIVEN VEHICLE DRAWING A TRAILER sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForAnyPowerDrivenVehicleDrawingATrailerSign">
+    <rdfs:label>NO ENTRY FOR ANY POWER-DRIVEN VEHICLE DRAWING A TRAILER sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForVehiclesCarryingDangerousGoodsSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES CARRYING DANGEROUS GOODS FOR WHICH SPECIAL SIGN PLATING IS PRESCRIBED sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR VEHICLES CARRYING DANGEROUS GOODS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForPedestriansSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR PEDESTRIANS sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR PEDESTRIANS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForAnimalDrawnVehiclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR ANIMAL-DRAWN VEHICLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR ANIMAL-DRAWN VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForHandcartsSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR HANDCARTS sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR HANDCARTS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForPowerDrivenAgriculturalVehiclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR POWER-DRIVEN AGRICULTURAL VEHICLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR POWER DRIVEN AGRICULTURAL VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForPowerDrivenVehiclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR POWER-DRIVEN VEHICLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR POWER DRIVEN VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForPowerDrivenVehiclesOrAnimalDrawnVehiclesSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR POWER-DRIVEN VEHICLES OR ANIMAL-DRAWN VEHICLES sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR POWER DRIVEN VEHICLES OR ANIMAL-DRAWN VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForVehiclesExceedingWidthSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES HAVING AN OVERALL WIDTH EXCEEDING ... METRES sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForVehiclesExceedingOverallWidthSign">
+    <rdfs:label>NO ENTRY FOR VEHICLES HAVING AN OVERALL WIDTH EXCEEDING ... METRES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForVehiclesExceedingHeightSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES HAVING AN OVERALL HEIGHT EXCEEDING ... METRES sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForVehiclesExceedingOverallHeightSign">
+    <rdfs:label>NO ENTRY FOR VEHICLES HAVING AN OVERALL HEIGHT EXCEEDING ... METRES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForVehiclesExceedingLadenMassSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES EXCEEDING ... TONNES LADEN MASS sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR VEHICLES EXCEEDING ... TONNES LADEN MASS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoEntryForVehiclesExceedingAxleMassSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES HAVING A MASS EXCEEDING ... TONNES ON ONE AXLE sign</rdfs:label>
+  <owl:Class rdf:about="#NoEntryForVehiclesExceedingMassOnOneAxleSign">
+    <rdfs:label>NO ENTRY FOR VEHICLES HAVING A MASS EXCEEDING ... TONNES ON ONE AXLE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoEntryForVehiclesOrCombinationsExceedingLengthSign">
-    <rdfs:label xml:lang="en">NO ENTRY FOR VEHICLES OR COMBINATIONS OF VEHICLES EXCEEDING ... METRES IN LENGTH sign</rdfs:label>
+    <rdfs:label>NO ENTRY FOR VEHICLES OR COMBINATIONS OF VEHICLES EXCEEDING ... METRES IN LENGTH sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#MinimumDistanceBetweenVehiclesSign">
-    <rdfs:label xml:lang="en">DRIVING OF VEHICLES LESS THAN ... METRES APART PROHIBITED sign</rdfs:label>
+    <rdfs:label>DRIVING OF VEHICLES LESS THAN ... METRES APART PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoLeftTurnSign">
-    <rdfs:label xml:lang="en">NO LEFT TURN sign</rdfs:label>
+    <rdfs:label>NO LEFT TURN sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoRightTurnSign">
-    <rdfs:label xml:lang="en">NO RIGHT TURN sign</rdfs:label>
+    <rdfs:label>NO RIGHT TURN sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoUTurnSign">
-    <rdfs:label xml:lang="en">NO U-TURNS sign</rdfs:label>
+  <owl:Class rdf:about="#NoUTurnsSign">
+    <rdfs:label>NO U-TURNS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#OvertakingProhibitedSign">
-    <rdfs:label xml:lang="en">OVERTAKING PROHIBITED sign</rdfs:label>
+    <rdfs:label>OVERTAKING PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#OvertakingByGoodsVehiclesProhibitedSign">
-    <rdfs:label xml:lang="en">OVERTAKING BY GOODS VEHICLES PROHIBITED sign</rdfs:label>
+    <rdfs:label>OVERTAKING BY GOODS VEHICLES PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#MaximumSpeedLimitSign">
-    <rdfs:label xml:lang="en">MAXIMUM SPEED LIMITED TO THE FIGURE INDICATED sign</rdfs:label>
+    <rdfs:label>MAXIMUM SPEED LIMITED TO THE FIGURE INDICATED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#UseOfAudibleWarningDevicesProhibitedSign">
-    <rdfs:label xml:lang="en">USE OF AUDIBLE WARNING DEVICES PROHIBITED sign</rdfs:label>
+    <rdfs:label>USE OF AUDIBLE WARNING DEVICES PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PassingWithoutStoppingProhibitedSign">
-    <rdfs:label xml:lang="en">PASSING WITHOUT STOPPING PROHIBITED sign</rdfs:label>
+    <rdfs:label>PASSING WITHOUT STOPPING PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfAllLocalProhibitionsSign">
-    <rdfs:label xml:lang="en">END OF ALL LOCAL PROHIBITIONS IMPOSED ON MOVING VEHICLES sign</rdfs:label>
+    <rdfs:label>END OF ALL LOCAL PROHIBITIONS IMPOSED ON MOVING VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfSpeedLimitSign">
-    <rdfs:label xml:lang="en">END OF SPEED LIMIT sign</rdfs:label>
+    <rdfs:label>END OF SPEED LIMIT sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfProhibitionOfOvertakingSign">
-    <rdfs:label xml:lang="en">END OF PROHIBITION OF OVERTAKING sign</rdfs:label>
+    <rdfs:label>END OF PROHIBITION OF OVERTAKING sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfProhibitionOfOvertakingForGoodsVehiclesSign">
-    <rdfs:label xml:lang="en">END OF PROHIBITION OF OVERTAKING FOR GOODS VEHICLES sign</rdfs:label>
+    <rdfs:label>END OF PROHIBITION OF OVERTAKING FOR GOODS VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NoStandingOrParkingSign">
-    <rdfs:label xml:lang="en">No standing or parking sign</rdfs:label>
+  <owl:Class rdf:about="#ParkingProhibitedSign">
+    <rdfs:label>PARKING PROHIBITED sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#StandingAndParkingProhibitedSign">
+    <rdfs:label>STANDING AND PARKING PROHIBITED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#AlternateParkingSign">
-    <rdfs:label xml:lang="en">Alternate parking sign</rdfs:label>
+    <rdfs:label>ALTERNATE PARKING sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ProhibitoryOrRestrictiveSign"/>
   </owl:Class>
   <owl:Class rdf:about="#DirectionToBeFollowedSign">
-    <rdfs:label xml:lang="en">Direction to be followed sign</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#MandatorySign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#CompulsoryDirectionSign">
-    <rdfs:label xml:lang="en">COMPULSORY DIRECTION sign</rdfs:label>
+    <rdfs:label>DIRECTION TO BE FOLLOWED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#PassThisSideSign">
-    <rdfs:label xml:lang="en">Pass this side sign</rdfs:label>
+    <rdfs:label>PASS THIS SIDE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryRoundaboutSign">
-    <rdfs:label xml:lang="en">Compulsory roundabout sign</rdfs:label>
+    <rdfs:label>COMPULSORY ROUNDABOUT sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryCycleTrackSign">
-    <rdfs:label xml:lang="en">Compulsory cycle track sign</rdfs:label>
+    <rdfs:label>COMPULSORY CYCLE TRACK sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryFootpathSign">
-    <rdfs:label xml:lang="en">Compulsory footpath sign</rdfs:label>
+    <rdfs:label>COMPULSORY FOOTPATH sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryTrackForRidersOnHorsebackSign">
-    <rdfs:label xml:lang="en">Compulsory track for riders on horseback sign</rdfs:label>
+    <rdfs:label>COMPULSORY TRACK FOR RIDERS ON HORSEBACK sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryMinimumSpeedSign">
-    <rdfs:label xml:lang="en">Compulsory minimum speed sign</rdfs:label>
+    <rdfs:label>COMPULSORY MINIMUM SPEED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfCompulsoryMinimumSpeedSign">
-    <rdfs:label xml:lang="en">End of compulsory minimum speed sign</rdfs:label>
+    <rdfs:label>END OF COMPULSORY MINIMUM SPEED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#SnowChainsCompulsorySign">
-    <rdfs:label xml:lang="en">SNOW CHAINS COMPULSORY sign</rdfs:label>
+    <rdfs:label>SNOW CHAINS COMPULSORY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#CompulsoryDirectionForVehiclesCarryingDangerousGoodsSign">
-    <rdfs:label xml:lang="en">Compulsory direction for vehicles carrying dangerous goods sign</rdfs:label>
+    <rdfs:label>COMPULSORY DIRECTION FOR VEHICLES CARRYING DANGEROUS GOODS sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#MandatorySign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CombinedCompulsoryCycleTrackAndFootpathSign">
+    <rdfs:label>Combination of compulsory cycle track and compulsory footpath sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#MandatorySign"/>
   </owl:Class>
   <owl:Class rdf:about="#LaneRegulationOrDangerWarningSign">
-    <rdfs:label xml:lang="en">Sign indicating a regulation or danger warning applying to one or more traffic lanes</rdfs:label>
+    <rdfs:label>Sign indicating a regulation or danger warning applying to one or more traffic lanes</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#BusLaneSign">
-    <rdfs:label xml:lang="en">Sign indicating lanes reserved for buses</rdfs:label>
+  <owl:Class rdf:about="#CompulsoryMinimumSpeedApplyingToDifferentLanesSign">
+    <rdfs:label>COMPULSORY MINIMUM SPEED APPLYING TO DIFFERENT LANES sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CompulsoryMinimumSpeedApplyingToOneLaneSign">
+    <rdfs:label>COMPULSORY MINIMUM SPEED APPLYING TO ONE LANE sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SpeedLimitsApplyingToDifferentLanesSign">
+    <rdfs:label>SPEED LIMITS APPLYING TO DIFFERENT LANES sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ReservedBusLaneSign">
+    <rdfs:label>Sign indicating lanes reserved for buses</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#OneWaySign">
-    <rdfs:label xml:lang="en">ONE-WAY sign</rdfs:label>
+    <rdfs:label>ONE-WAY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PreselectionSign">
-    <rdfs:label xml:lang="en">Preselection sign</rdfs:label>
+    <rdfs:label>Preselection sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#MotorwaySign">
-    <rdfs:label xml:lang="en">MOTORWAY sign</rdfs:label>
+    <rdfs:label>MOTORWAY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfMotorwaySign">
-    <rdfs:label xml:lang="en">END OF MOTORWAY sign</rdfs:label>
+    <rdfs:label>END OF MOTORWAY sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RoadForMotorVehiclesSign">
-    <rdfs:label xml:lang="en">ROAD FOR MOTOR VEHICLES sign</rdfs:label>
+    <rdfs:label>ROAD FOR MOTOR VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfRoadForMotorVehiclesSign">
-    <rdfs:label xml:lang="en">END OF ROAD FOR MOTOR VEHICLES sign</rdfs:label>
+    <rdfs:label>END OF ROAD FOR MOTOR VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#BeginningOfBuiltUpAreaSign">
-    <rdfs:label xml:lang="en">Sign indicating the beginning of a built-up area</rdfs:label>
+    <rdfs:label>Sign indicating the beginning of a built-up area</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfBuiltUpAreaSign">
-    <rdfs:label xml:lang="en">Sign indicating the end of a built-up area</rdfs:label>
+    <rdfs:label>Sign indicating the end of a built-up area</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#ZoneSign">
-    <rdfs:label xml:lang="en">Sign having zonal validity</rdfs:label>
+  <owl:Class rdf:about="#ZonalValiditySign">
+    <rdfs:label>Sign having zonal validity</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#EndOfZoneSign">
-    <rdfs:label xml:lang="en">Sign indicating the exit from a zone</rdfs:label>
+  <owl:Class rdf:about="#BeginningOfZoneSign">
+    <rdfs:label>Beginning of a zone sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ExitFromZoneSign">
+    <rdfs:label>Exit from a zone sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#TunnelSign">
-    <rdfs:label xml:lang="en">TUNNEL sign</rdfs:label>
+    <rdfs:label>TUNNEL sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EndOfTunnelSign">
-    <rdfs:label xml:lang="en">END OF TUNNEL sign</rdfs:label>
+    <rdfs:label>END OF TUNNEL sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PedestrianCrossingSign">
-    <rdfs:label xml:lang="en">PEDESTRIAN CROSSING sign</rdfs:label>
+    <rdfs:label>PEDESTRIAN CROSSING sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#HospitalSign">
-    <rdfs:label xml:lang="en">HOSPITAL sign</rdfs:label>
+    <rdfs:label>HOSPITAL sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#ParkingSign">
-    <rdfs:label xml:lang="en">PARKING sign</rdfs:label>
+    <rdfs:label>PARKING sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#BusStopSign">
-    <rdfs:label xml:lang="en">BUS STOP sign</rdfs:label>
+    <rdfs:label>BUS STOP sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#TramwayStopSign">
-    <rdfs:label xml:lang="en">TRAMWAY STOP sign</rdfs:label>
+    <rdfs:label>TRAMWAY STOP sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EmergencyStoppingPlaceSign">
-    <rdfs:label xml:lang="en">EMERGENCY STOPPING PLACE sign</rdfs:label>
+    <rdfs:label>EMERGENCY STOPPING PLACE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#FirstAidStationSign">
-    <rdfs:label xml:lang="en">FIRST-AID STATION sign</rdfs:label>
+    <rdfs:label>FIRST-AID STATION sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#BreakdownServiceSign">
-    <rdfs:label xml:lang="en">BREAKDOWN SERVICE sign</rdfs:label>
+    <rdfs:label>BREAKDOWN SERVICE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#TelephoneSign">
-    <rdfs:label xml:lang="en">TELEPHONE sign</rdfs:label>
+    <rdfs:label>TELEPHONE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#FillingStationSign">
-    <rdfs:label xml:lang="en">FILLING STATION sign</rdfs:label>
+    <rdfs:label>FILLING STATION sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#HotelOrMotelSign">
-    <rdfs:label xml:lang="en">HOTEL or MOTEL sign</rdfs:label>
+    <rdfs:label>HOTEL or MOTEL sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RestaurantSign">
-    <rdfs:label xml:lang="en">RESTAURANT sign</rdfs:label>
+    <rdfs:label>RESTAURANT sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RefreshmentsOrCafeteriaSign">
-    <rdfs:label xml:lang="en">REFRESHMENTS OR CAFETERIA sign</rdfs:label>
+    <rdfs:label>REFRESHMENTS OR CAFETERIA sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PicnicSiteSign">
-    <rdfs:label xml:lang="en">PICNIC SITE sign</rdfs:label>
+    <rdfs:label>PICNIC SITE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#StartingPointForWalksSign">
-    <rdfs:label xml:lang="en">STARTING-POINT FOR WALKS sign</rdfs:label>
+    <rdfs:label>STARTING-POINT FOR WALKS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#CampingSiteServiceSign">
-    <rdfs:label xml:lang="en">CAMPING SITE sign</rdfs:label>
+  <owl:Class rdf:about="#CampingSiteSign">
+    <rdfs:label>CAMPING SITE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CaravanSiteSign">
-    <rdfs:label xml:lang="en">CARAVAN SITE sign</rdfs:label>
+    <rdfs:label>CARAVAN SITE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#CampingAndCaravanSiteSign">
-    <rdfs:label xml:lang="en">CAMPING AND CARAVAN SITE sign</rdfs:label>
+    <rdfs:label>CAMPING AND CARAVAN SITE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#YouthHostelServiceSign">
-    <rdfs:label xml:lang="en">YOUTH HOSTEL sign</rdfs:label>
+  <owl:Class rdf:about="#YouthHostelSign">
+    <rdfs:label>YOUTH HOSTEL sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EmergencyTelephoneSign">
-    <rdfs:label xml:lang="en">EMERGENCY TELEPHONE sign</rdfs:label>
+    <rdfs:label>EMERGENCY TELEPHONE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
   <owl:Class rdf:about="#ExtinguisherSign">
-    <rdfs:label xml:lang="en">EXTINGUISHER sign</rdfs:label>
+    <rdfs:label>EXTINGUISHER sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#InformationFacilitiesOrServiceSign"/>
   </owl:Class>
+  <owl:Class rdf:about="#AdvanceDirectionSign">
+    <rdfs:label>Advance direction sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DirectionSign">
+    <rdfs:label>Direction sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RoadIdentificationSign">
+    <rdfs:label>Road identification sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PlaceIdentificationSign">
+    <rdfs:label>Place identification sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ConfirmatorySign">
+    <rdfs:label>Confirmatory sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IndicationSign">
+    <rdfs:label>Indication sign</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DirectionPositionOrIndicationSign"/>
+  </owl:Class>
   <owl:Class rdf:about="#GeneralAdvanceDirectionSign">
-    <rdfs:label xml:lang="en">General advance direction sign</rdfs:label>
+    <rdfs:label>General advance direction sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdvanceDirectionSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoThroughRoadAdvanceDirectionSign">
-    <rdfs:label xml:lang="en">Advance direction sign for NO THROUGH ROAD</rdfs:label>
+    <rdfs:label>Advance direction sign for NO THROUGH ROAD</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdvanceDirectionSign"/>
   </owl:Class>
   <owl:Class rdf:about="#LeftTurnRouteAdvanceDirectionSign">
-    <rdfs:label xml:lang="en">Advance direction sign for route to be followed in order to turn left</rdfs:label>
+    <rdfs:label>Advance direction sign for route to be followed to turn left</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdvanceDirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DirectionOfPlaceSign">
-    <rdfs:label xml:lang="en">Sign showing the direction of a place</rdfs:label>
+  <owl:Class rdf:about="#PlaceDirectionSign">
+    <rdfs:label>Direction sign showing the direction of a place</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DirectionOfAirfieldSign">
-    <rdfs:label xml:lang="en">Sign showing the direction of an airfield</rdfs:label>
+  <owl:Class rdf:about="#AirfieldDirectionSign">
+    <rdfs:label>Direction sign showing the direction of an airfield</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DirectionOfCampingSiteSign">
-    <rdfs:label xml:lang="en">Sign showing the direction of a camping site</rdfs:label>
+  <owl:Class rdf:about="#CampingSiteDirectionSign">
+    <rdfs:label>Direction sign showing the direction of a camping site</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DirectionOfYouthHostelSign">
-    <rdfs:label xml:lang="en">Sign showing the direction of a youth hostel</rdfs:label>
+  <owl:Class rdf:about="#YouthHostelDirectionSign">
+    <rdfs:label>Direction sign showing the direction of a youth hostel</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DirectionOfParkAndRideSign">
-    <rdfs:label xml:lang="en">Sign showing the direction of a car park intended for public transport users</rdfs:label>
+  <owl:Class rdf:about="#ParkAndRideDirectionSign">
+    <rdfs:label>Direction sign showing the direction of a car park intended for public transport users</rdfs:label>
     <rdfs:subClassOf rdf:resource="#DirectionSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#ConfirmatoryRouteSign">
-    <rdfs:label xml:lang="en">Confirmatory sign example G10</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#ConfirmatorySign"/>
-  </owl:Class>
-  <owl:Class rdf:about="#TrafficLanesNumberAndDirectionSign">
-    <rdfs:label xml:lang="en">Sign indicating the number and direction of traffic lanes</rdfs:label>
+  <owl:Class rdf:about="#NumberAndDirectionOfTrafficLanesSign">
+    <rdfs:label>Sign indicating the number and direction of traffic lanes</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#TrafficLaneClosureSign">
-    <rdfs:label xml:lang="en">Sign indicating closure of a traffic lane</rdfs:label>
+  <owl:Class rdf:about="#ClosureOfTrafficLaneSign">
+    <rdfs:label>Sign indicating closure of a traffic lane</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#NoThroughRoadSign">
-    <rdfs:label xml:lang="en">NO THROUGH ROAD sign</rdfs:label>
+    <rdfs:label>NO THROUGH ROAD sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#GeneralSpeedLimitsSign">
-    <rdfs:label xml:lang="en">GENERAL SPEED LIMITS sign</rdfs:label>
+    <rdfs:label>GENERAL SPEED LIMITS sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#RoadOpenOrClosedSign">
-    <rdfs:label xml:lang="en">ROAD OPEN OR CLOSED sign</rdfs:label>
+    <rdfs:label>ROAD OPEN OR CLOSED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#AdvisorySpeedSign">
-    <rdfs:label xml:lang="en">ADVISORY SPEED sign</rdfs:label>
+    <rdfs:label>ADVISORY SPEED sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#AdvisedItineraryForHeavyVehiclesSign">
-    <rdfs:label xml:lang="en">ADVISED ITINERARY FOR HEAVY VEHICLES sign</rdfs:label>
+    <rdfs:label>ADVISED ITINERARY FOR HEAVY VEHICLES sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EscapeLaneSign">
-    <rdfs:label xml:lang="en">ESCAPE LANE sign</rdfs:label>
+    <rdfs:label>ESCAPE LANE sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#PedestrianOverpassOrUnderpassSign">
-    <rdfs:label xml:lang="en">Sign notifying a pedestrian overpass or underpass</rdfs:label>
+    <rdfs:label>Pedestrian overpass or underpass sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#MotorwayExitAdvanceSign">
-    <rdfs:label xml:lang="en">Sign notifying an exit from a motorway</rdfs:label>
+  <owl:Class rdf:about="#MotorwayExitSign">
+    <rdfs:label>Sign notifying an exit from a motorway</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
   <owl:Class rdf:about="#EmergencyExitLocationSign">
-    <rdfs:label xml:lang="en">Sign indicating the location of emergency exits</rdfs:label>
+    <rdfs:label>Sign indicating the location of emergency exits</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#NearestEmergencyExitDirectionSign">
-    <rdfs:label xml:lang="en">Sign indicating the direction and distance of the nearest emergency exits</rdfs:label>
+  <owl:Class rdf:about="#EmergencyExitDirectionAndDistanceSign">
+    <rdfs:label>Sign indicating the direction and distance of the nearest emergency exits</rdfs:label>
     <rdfs:subClassOf rdf:resource="#IndicationSign"/>
   </owl:Class>
-  <owl:Class rdf:about="#DistanceAdditionalPanel">
-    <rdfs:label xml:lang="en">Distance additional panel</rdfs:label>
+  <owl:Class rdf:about="#DistancePanel">
+    <rdfs:label>Additional panel showing the distance from the sign</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#LengthAdditionalPanel">
-    <rdfs:label xml:lang="en">Length additional panel</rdfs:label>
+  <owl:Class rdf:about="#LengthPanel">
+    <rdfs:label>Additional panel showing the length of the dangerous section or zone</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#ParkingProhibitionOrRestrictionAdditionalPanel">
-    <rdfs:label xml:lang="en">Parking prohibition or restriction additional panel</rdfs:label>
+  <owl:Class rdf:about="#ParkingProhibitionBeginningPanel">
+    <rdfs:label>Additional panel showing the beginning of parking prohibition</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#ParticularRoadUsersAdditionalPanel">
-    <rdfs:label xml:lang="en">Particular road users additional panel</rdfs:label>
+  <owl:Class rdf:about="#ParkingProhibitionContinuationPanel">
+    <rdfs:label>Additional panel showing continuation of parking prohibition</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#ExceptParticularRoadUsersAdditionalPanel">
-    <rdfs:label xml:lang="en">Except particular road users additional panel</rdfs:label>
+  <owl:Class rdf:about="#ParkingProhibitionEndPanel">
+    <rdfs:label>Additional panel showing the end of parking prohibition</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#HandicappedPersonsParkingAdditionalPanel">
-    <rdfs:label xml:lang="en">Handicapped persons parking additional panel</rdfs:label>
+  <owl:Class rdf:about="#RoadUserCategoryPanel">
+    <rdfs:label>Additional panel restricting regulatory signs to particular road users</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#PriorityRoadDiagramAdditionalPanel">
-    <rdfs:label xml:lang="en">Priority road diagram additional panel</rdfs:label>
+  <owl:Class rdf:about="#ExceptRoadUserCategoryPanel">
+    <rdfs:label>Additional panel excepting a category of road users</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
-  <owl:Class rdf:about="#IceOrSnowSlipperyRoadAdditionalPanel">
-    <rdfs:label xml:lang="en">Ice or snow slippery road additional panel</rdfs:label>
+  <owl:Class rdf:about="#HandicappedPersonsParkingPanel">
+    <rdfs:label>Additional panel indicating parking reserved for handicapped persons</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PriorityRoadDiagramPanel">
+    <rdfs:label>Additional panel displaying a priority-road intersection diagram</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IceOrSnowSlipperyRoadPanel">
+    <rdfs:label>Additional panel indicating slippery road ahead because of ice or snow</rdfs:label>
     <rdfs:subClassOf rdf:resource="#AdditionalPanel"/>
   </owl:Class>
   <owl:AllDisjointClasses>
@@ -677,42 +697,6 @@
       <rdf:Description rdf:about="#DangerWarningSign"/>
       <rdf:Description rdf:about="#RegulatorySign"/>
       <rdf:Description rdf:about="#InformativeSign"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:AllDisjointClasses>
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#DangerousBendOrBendsSign"/>
-      <rdf:Description rdf:about="#DangerousDescentSign"/>
-      <rdf:Description rdf:about="#SteepAscentSign"/>
-      <rdf:Description rdf:about="#CarriagewayNarrowsSign"/>
-      <rdf:Description rdf:about="#SwingBridgeSign"/>
-      <rdf:Description rdf:about="#RoadLeadsOntoQuayOrRiverBankSign"/>
-      <rdf:Description rdf:about="#UnevenRoadSign"/>
-      <rdf:Description rdf:about="#DangerousShouldersSign"/>
-      <rdf:Description rdf:about="#SlipperyRoadSign"/>
-      <rdf:Description rdf:about="#LooseGravelSign"/>
-      <rdf:Description rdf:about="#FallingRocksSign"/>
-      <rdf:Description rdf:about="#PedestrianCrossingWarningSign"/>
-      <rdf:Description rdf:about="#ChildrenSign"/>
-      <rdf:Description rdf:about="#CyclistsEnteringOrCrossingSign"/>
-      <rdf:Description rdf:about="#CattleOrOtherAnimalsCrossingSign"/>
-      <rdf:Description rdf:about="#RoadWorksSign"/>
-      <rdf:Description rdf:about="#LightSignalsSign"/>
-      <rdf:Description rdf:about="#IntersectionGeneralPriorityRuleSign"/>
-      <rdf:Description rdf:about="#IntersectionWithRoadUsersMustGiveWaySign"/>
-      <rdf:Description rdf:about="#IntersectionWhereDriversMustGiveWaySign"/>
-      <rdf:Description rdf:about="#RoundaboutWarningSign"/>
-      <rdf:Description rdf:about="#IntersectionTrafficRegulatedByLightSignalSign"/>
-      <rdf:Description rdf:about="#TwoWayTrafficSign"/>
-      <rdf:Description rdf:about="#TrafficCongestionSign"/>
-      <rdf:Description rdf:about="#LevelCrossingWithGatesSign"/>
-      <rdf:Description rdf:about="#OtherLevelCrossingSign"/>
-      <rdf:Description rdf:about="#IntersectionWithTramwayLineSign"/>
-      <rdf:Description rdf:about="#ImmediateVicinityOfLevelCrossingSign"/>
-      <rdf:Description rdf:about="#ApproachToLevelCrossingOrSwingBridgeSign"/>
-      <rdf:Description rdf:about="#AirfieldSign"/>
-      <rdf:Description rdf:about="#CrossWindSign"/>
-      <rdf:Description rdf:about="#OtherDangersSign"/>
     </owl:members>
   </owl:AllDisjointClasses>
   <owl:AllDisjointClasses>
@@ -732,6 +716,52 @@
   </owl:AllDisjointClasses>
   <owl:AllDisjointClasses>
     <owl:members rdf:parseType="Collection">
+      <rdf:Description rdf:about="#AdvanceDirectionSign"/>
+      <rdf:Description rdf:about="#DirectionSign"/>
+      <rdf:Description rdf:about="#RoadIdentificationSign"/>
+      <rdf:Description rdf:about="#PlaceIdentificationSign"/>
+      <rdf:Description rdf:about="#ConfirmatorySign"/>
+      <rdf:Description rdf:about="#IndicationSign"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <rdf:Description rdf:about="#DangerousBendOrBendsSign"/>
+      <rdf:Description rdf:about="#DangerousDescentSign"/>
+      <rdf:Description rdf:about="#SteepAscentSign"/>
+      <rdf:Description rdf:about="#CarriagewayNarrowsSign"/>
+      <rdf:Description rdf:about="#SwingBridgeSign"/>
+      <rdf:Description rdf:about="#RoadLeadsOnToQuayOrRiverBankSign"/>
+      <rdf:Description rdf:about="#UnevenRoadSign"/>
+      <rdf:Description rdf:about="#DangerousShouldersSign"/>
+      <rdf:Description rdf:about="#SlipperyRoadSign"/>
+      <rdf:Description rdf:about="#LooseGravelSign"/>
+      <rdf:Description rdf:about="#FallingRocksSign"/>
+      <rdf:Description rdf:about="#PedestrianCrossingWarningSign"/>
+      <rdf:Description rdf:about="#ChildrenSign"/>
+      <rdf:Description rdf:about="#CyclistsEnteringOrCrossingSign"/>
+      <rdf:Description rdf:about="#CattleOrOtherAnimalsCrossingSign"/>
+      <rdf:Description rdf:about="#RoadWorksWarningSign"/>
+      <rdf:Description rdf:about="#LightSignalsSign"/>
+      <rdf:Description rdf:about="#IntersectionWherePriorityIsPrescribedByGeneralPriorityRuleSign"/>
+      <rdf:Description rdf:about="#IntersectionWithRoadWhoseUsersMustGiveWaySign"/>
+      <rdf:Description rdf:about="#IntersectionWithRoadToWhoseUsersDriversMustGiveWaySign"/>
+      <rdf:Description rdf:about="#RoundaboutWarningSign"/>
+      <rdf:Description rdf:about="#IntersectionWhereTrafficIsRegulatedByLightSignalSign"/>
+      <rdf:Description rdf:about="#TwoWayTrafficSign"/>
+      <rdf:Description rdf:about="#TrafficCongestionSign"/>
+      <rdf:Description rdf:about="#LevelCrossingWithGatesSign"/>
+      <rdf:Description rdf:about="#OtherLevelCrossingSign"/>
+      <rdf:Description rdf:about="#IntersectionWithTramwayLineSign"/>
+      <rdf:Description rdf:about="#ImmediateVicinityOfLevelCrossingSign"/>
+      <rdf:Description rdf:about="#ApproachToLevelCrossingOrSwingBridgeAdditionalSign"/>
+      <rdf:Description rdf:about="#AirfieldSign"/>
+      <rdf:Description rdf:about="#CrossWindSign"/>
+      <rdf:Description rdf:about="#OtherDangersSign"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
       <rdf:Description rdf:about="#GiveWaySign"/>
       <rdf:Description rdf:about="#StopSign"/>
       <rdf:Description rdf:about="#PriorityRoadSign"/>
@@ -744,13 +774,13 @@
     <owl:members rdf:parseType="Collection">
       <rdf:Description rdf:about="#NoEntrySign"/>
       <rdf:Description rdf:about="#ClosedToAllVehiclesInBothDirectionsSign"/>
-      <rdf:Description rdf:about="#NoEntryForPowerDrivenVehicleExceptTwoWheeledMotorCyclesSign"/>
+      <rdf:Description rdf:about="#NoEntryForAnyPowerDrivenVehicleExceptTwoWheeledMotorCyclesWithoutSideCarSign"/>
       <rdf:Description rdf:about="#NoEntryForMotorCyclesSign"/>
       <rdf:Description rdf:about="#NoEntryForCyclesSign"/>
       <rdf:Description rdf:about="#NoEntryForMopedsSign"/>
       <rdf:Description rdf:about="#NoEntryForGoodsVehiclesSign"/>
-      <rdf:Description rdf:about="#NoEntryForPowerDrivenVehicleDrawingTrailerOtherThanSemiTrailerOrSingleAxleTrailerSign"/>
-      <rdf:Description rdf:about="#NoEntryForPowerDrivenVehicleDrawingTrailerSign"/>
+      <rdf:Description rdf:about="#NoEntryForAnyPowerDrivenVehicleDrawingATrailerOtherThanSemiTrailerOrSingleAxleTrailerSign"/>
+      <rdf:Description rdf:about="#NoEntryForAnyPowerDrivenVehicleDrawingATrailerSign"/>
       <rdf:Description rdf:about="#NoEntryForVehiclesCarryingDangerousGoodsSign"/>
       <rdf:Description rdf:about="#NoEntryForPedestriansSign"/>
       <rdf:Description rdf:about="#NoEntryForAnimalDrawnVehiclesSign"/>
@@ -758,15 +788,15 @@
       <rdf:Description rdf:about="#NoEntryForPowerDrivenAgriculturalVehiclesSign"/>
       <rdf:Description rdf:about="#NoEntryForPowerDrivenVehiclesSign"/>
       <rdf:Description rdf:about="#NoEntryForPowerDrivenVehiclesOrAnimalDrawnVehiclesSign"/>
-      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingWidthSign"/>
-      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingHeightSign"/>
+      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingOverallWidthSign"/>
+      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingOverallHeightSign"/>
       <rdf:Description rdf:about="#NoEntryForVehiclesExceedingLadenMassSign"/>
-      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingAxleMassSign"/>
+      <rdf:Description rdf:about="#NoEntryForVehiclesExceedingMassOnOneAxleSign"/>
       <rdf:Description rdf:about="#NoEntryForVehiclesOrCombinationsExceedingLengthSign"/>
       <rdf:Description rdf:about="#MinimumDistanceBetweenVehiclesSign"/>
       <rdf:Description rdf:about="#NoLeftTurnSign"/>
       <rdf:Description rdf:about="#NoRightTurnSign"/>
-      <rdf:Description rdf:about="#NoUTurnSign"/>
+      <rdf:Description rdf:about="#NoUTurnsSign"/>
       <rdf:Description rdf:about="#OvertakingProhibitedSign"/>
       <rdf:Description rdf:about="#OvertakingByGoodsVehiclesProhibitedSign"/>
       <rdf:Description rdf:about="#MaximumSpeedLimitSign"/>
@@ -776,14 +806,14 @@
       <rdf:Description rdf:about="#EndOfSpeedLimitSign"/>
       <rdf:Description rdf:about="#EndOfProhibitionOfOvertakingSign"/>
       <rdf:Description rdf:about="#EndOfProhibitionOfOvertakingForGoodsVehiclesSign"/>
-      <rdf:Description rdf:about="#NoStandingOrParkingSign"/>
+      <rdf:Description rdf:about="#ParkingProhibitedSign"/>
+      <rdf:Description rdf:about="#StandingAndParkingProhibitedSign"/>
       <rdf:Description rdf:about="#AlternateParkingSign"/>
     </owl:members>
   </owl:AllDisjointClasses>
   <owl:AllDisjointClasses>
     <owl:members rdf:parseType="Collection">
       <rdf:Description rdf:about="#DirectionToBeFollowedSign"/>
-      <rdf:Description rdf:about="#CompulsoryDirectionSign"/>
       <rdf:Description rdf:about="#PassThisSideSign"/>
       <rdf:Description rdf:about="#CompulsoryRoundaboutSign"/>
       <rdf:Description rdf:about="#CompulsoryCycleTrackSign"/>
@@ -793,12 +823,16 @@
       <rdf:Description rdf:about="#EndOfCompulsoryMinimumSpeedSign"/>
       <rdf:Description rdf:about="#SnowChainsCompulsorySign"/>
       <rdf:Description rdf:about="#CompulsoryDirectionForVehiclesCarryingDangerousGoodsSign"/>
+      <rdf:Description rdf:about="#CombinedCompulsoryCycleTrackAndFootpathSign"/>
     </owl:members>
   </owl:AllDisjointClasses>
   <owl:AllDisjointClasses>
     <owl:members rdf:parseType="Collection">
       <rdf:Description rdf:about="#LaneRegulationOrDangerWarningSign"/>
-      <rdf:Description rdf:about="#BusLaneSign"/>
+      <rdf:Description rdf:about="#CompulsoryMinimumSpeedApplyingToDifferentLanesSign"/>
+      <rdf:Description rdf:about="#CompulsoryMinimumSpeedApplyingToOneLaneSign"/>
+      <rdf:Description rdf:about="#SpeedLimitsApplyingToDifferentLanesSign"/>
+      <rdf:Description rdf:about="#ReservedBusLaneSign"/>
       <rdf:Description rdf:about="#OneWaySign"/>
       <rdf:Description rdf:about="#PreselectionSign"/>
       <rdf:Description rdf:about="#MotorwaySign"/>
@@ -807,8 +841,9 @@
       <rdf:Description rdf:about="#EndOfRoadForMotorVehiclesSign"/>
       <rdf:Description rdf:about="#BeginningOfBuiltUpAreaSign"/>
       <rdf:Description rdf:about="#EndOfBuiltUpAreaSign"/>
-      <rdf:Description rdf:about="#ZoneSign"/>
-      <rdf:Description rdf:about="#EndOfZoneSign"/>
+      <rdf:Description rdf:about="#ZonalValiditySign"/>
+      <rdf:Description rdf:about="#BeginningOfZoneSign"/>
+      <rdf:Description rdf:about="#ExitFromZoneSign"/>
       <rdf:Description rdf:about="#TunnelSign"/>
       <rdf:Description rdf:about="#EndOfTunnelSign"/>
       <rdf:Description rdf:about="#PedestrianCrossingSign"/>
@@ -830,66 +865,26 @@
       <rdf:Description rdf:about="#RefreshmentsOrCafeteriaSign"/>
       <rdf:Description rdf:about="#PicnicSiteSign"/>
       <rdf:Description rdf:about="#StartingPointForWalksSign"/>
-      <rdf:Description rdf:about="#CampingSiteServiceSign"/>
+      <rdf:Description rdf:about="#CampingSiteSign"/>
       <rdf:Description rdf:about="#CaravanSiteSign"/>
       <rdf:Description rdf:about="#CampingAndCaravanSiteSign"/>
-      <rdf:Description rdf:about="#YouthHostelServiceSign"/>
+      <rdf:Description rdf:about="#YouthHostelSign"/>
       <rdf:Description rdf:about="#EmergencyTelephoneSign"/>
       <rdf:Description rdf:about="#ExtinguisherSign"/>
     </owl:members>
   </owl:AllDisjointClasses>
   <owl:AllDisjointClasses>
     <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#AdvanceDirectionSign"/>
-      <rdf:Description rdf:about="#DirectionSign"/>
-      <rdf:Description rdf:about="#RoadIdentificationSign"/>
-      <rdf:Description rdf:about="#PlaceIdentificationSign"/>
-      <rdf:Description rdf:about="#ConfirmatorySign"/>
-      <rdf:Description rdf:about="#IndicationSign"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:AllDisjointClasses>
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#DistanceAdditionalPanel"/>
-      <rdf:Description rdf:about="#LengthAdditionalPanel"/>
-      <rdf:Description rdf:about="#ParkingProhibitionOrRestrictionAdditionalPanel"/>
-      <rdf:Description rdf:about="#ParticularRoadUsersAdditionalPanel"/>
-      <rdf:Description rdf:about="#ExceptParticularRoadUsersAdditionalPanel"/>
-      <rdf:Description rdf:about="#HandicappedPersonsParkingAdditionalPanel"/>
-      <rdf:Description rdf:about="#PriorityRoadDiagramAdditionalPanel"/>
-      <rdf:Description rdf:about="#IceOrSnowSlipperyRoadAdditionalPanel"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:AllDisjointClasses>
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#GeneralAdvanceDirectionSign"/>
-      <rdf:Description rdf:about="#NoThroughRoadAdvanceDirectionSign"/>
-      <rdf:Description rdf:about="#LeftTurnRouteAdvanceDirectionSign"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:AllDisjointClasses>
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#DirectionOfPlaceSign"/>
-      <rdf:Description rdf:about="#DirectionOfAirfieldSign"/>
-      <rdf:Description rdf:about="#DirectionOfCampingSiteSign"/>
-      <rdf:Description rdf:about="#DirectionOfYouthHostelSign"/>
-      <rdf:Description rdf:about="#DirectionOfParkAndRideSign"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:AllDisjointClasses>
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="#TrafficLanesNumberAndDirectionSign"/>
-      <rdf:Description rdf:about="#TrafficLaneClosureSign"/>
-      <rdf:Description rdf:about="#NoThroughRoadSign"/>
-      <rdf:Description rdf:about="#GeneralSpeedLimitsSign"/>
-      <rdf:Description rdf:about="#RoadOpenOrClosedSign"/>
-      <rdf:Description rdf:about="#AdvisorySpeedSign"/>
-      <rdf:Description rdf:about="#AdvisedItineraryForHeavyVehiclesSign"/>
-      <rdf:Description rdf:about="#EscapeLaneSign"/>
-      <rdf:Description rdf:about="#PedestrianOverpassOrUnderpassSign"/>
-      <rdf:Description rdf:about="#MotorwayExitAdvanceSign"/>
-      <rdf:Description rdf:about="#EmergencyExitLocationSign"/>
-      <rdf:Description rdf:about="#NearestEmergencyExitDirectionSign"/>
+      <rdf:Description rdf:about="#DistancePanel"/>
+      <rdf:Description rdf:about="#LengthPanel"/>
+      <rdf:Description rdf:about="#ParkingProhibitionBeginningPanel"/>
+      <rdf:Description rdf:about="#ParkingProhibitionContinuationPanel"/>
+      <rdf:Description rdf:about="#ParkingProhibitionEndPanel"/>
+      <rdf:Description rdf:about="#RoadUserCategoryPanel"/>
+      <rdf:Description rdf:about="#ExceptRoadUserCategoryPanel"/>
+      <rdf:Description rdf:about="#HandicappedPersonsParkingPanel"/>
+      <rdf:Description rdf:about="#PriorityRoadDiagramPanel"/>
+      <rdf:Description rdf:about="#IceOrSnowSlipperyRoadPanel"/>
     </owl:members>
   </owl:AllDisjointClasses>
 </rdf:RDF>
