@@ -16,11 +16,217 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/vienna-road-signs#appliesToRoadUser -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#appliesToRoadUser">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadUser"/>
+        <rdfs:comment>Relates a road sign to the category of road user to which its meaning applies.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#appliesToVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#appliesToVehicle">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Vehicle"/>
+        <rdfs:comment>Relates a road sign to the type of vehicle affected by, restricted by, or addressed by the sign.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#expressesObligation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#expressesObligation">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#expressesRegulation"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#MandatorySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Obligation"/>
+        <rdfs:comment>Relates a mandatory sign to the required action, direction, or behaviour it imposes.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#expressesProhibition -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#expressesProhibition">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#expressesRegulation"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Prohibition"/>
+        <rdfs:comment>Relates a prohibitory sign to the prohibited action, movement, vehicle category, or access condition it expresses.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#expressesRegulation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#expressesRegulation">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RegulatorySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
+        <rdfs:comment>Relates a regulatory sign to the traffic rule, requirement, restriction, prohibition, obligation, or priority instruction it expresses.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#expressesRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#expressesRestriction">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#expressesRegulation"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Restriction"/>
+        <rdfs:comment>Relates a prohibitory or restrictive sign to the restriction it expresses, such as a limit on movement, access, vehicle dimensions, or vehicle mass.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#hasAdditionalCondition -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#hasAdditionalCondition">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#AdditionalCondition"/>
+        <rdfs:comment>Relates a road sign to an additional condition governing its interpretation or applicability.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesDestination -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesDestination">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#DirectionSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Destination"/>
+        <rdfs:comment>Relates a direction sign to a place, route, locality, road identifier, or destination indicated by the sign.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesDirection -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesDirection">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#DirectionSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Direction"/>
+        <rdfs:comment>Relates a direction sign to the direction or route orientation that it indicates.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesHazard -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesHazard">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#warnsAbout"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#WarningSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadHazard"/>
+        <rdfs:comment>Relates a warning sign to a specific hazard indicated by its symbol or meaning.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesPriorityRule -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesPriorityRule">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#expressesRegulation"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#PrioritySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#PriorityRule"/>
+        <rdfs:comment>Relates a priority sign to the priority rule it communicates, such as give way, stop, priority road, end of priority, or priority over oncoming traffic.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesRoadCondition -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesRoadCondition">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#warnsAbout"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#WarningSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadCondition"/>
+        <rdfs:comment>Relates a warning sign to a road condition such as bends, slippery surface, uneven road, road works, narrowing, or other conditions affecting safe driving.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#indicatesService -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#indicatesService">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#ServiceSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#Service"/>
+        <rdfs:comment>Relates a service sign to the facility or service indicated to road users, such as emergency, fuel, lodging, or other road-user services.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#isAssociatedWithMTDSClass -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#isAssociatedWithMTDSClass">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#MTDSDatasetSignClass"/>
+        <rdfs:comment>Relates a Vienna Convention road-sign class to an associated MTDS dataset class used for dataset alignment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#isModifiedByPanel -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#isModifiedByPanel">
+        <owl:inverseOf rdf:resource="http://example.org/vienna-road-signs#modifiesSign"/>
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#AdditionalPanel"/>
+        <rdfs:comment>Relates a main road sign to an additional panel that qualifies or modifies its meaning.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#modifiesSign -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#modifiesSign">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#AdditionalPanel"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+        <rdfs:comment>Relates an additional panel to the main road sign whose meaning, scope, distance, duration, vehicle category, or condition it modifies.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#regulatesTrafficOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#regulatesTrafficOf">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RegulatorySign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadUser"/>
+        <rdfs:comment>Relates a regulatory sign to the road-user category whose traffic behaviour is regulated.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#warnsAbout -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/vienna-road-signs#warnsAbout">
+        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#WarningSign"/>
+        <rdfs:range rdf:resource="http://example.org/vienna-road-signs#RoadHazard"/>
+        <rdfs:comment>Relates a warning sign to the road hazard, danger, or risk about which it warns road users.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://example.org/vienna-road-signs#AdditionalCondition -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#AdditionalCondition">
+        <rdfs:comment>Conceptual class for conditions that qualify, limit, or specify the applicability of a main sign, typically through an additional panel.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -110,6 +316,15 @@
     <owl:Class rdf:about="http://example.org/vienna-road-signs#BeginningOfZoneSign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#SpecialRegulationSign"/>
         <rdfs:label>Beginning of a zone sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Bicycle -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#Vehicle"/>
+        <rdfs:comment>Conceptual vehicle class for bicycles or cycles addressed by traffic signs.</rdfs:comment>
     </owl:Class>
     
 
@@ -355,6 +570,22 @@
     <owl:Class rdf:about="http://example.org/vienna-road-signs#DangerousShouldersSign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#DangerWarningSign"/>
         <rdfs:label>Dangerous shoulders sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Destination -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Destination">
+        <rdfs:comment>Conceptual class for destinations, places, routes, or named locations indicated by direction signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Direction -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Direction">
+        <rdfs:comment>Conceptual class for directional information indicated by direction, position, or indication signs.</rdfs:comment>
     </owl:Class>
     
 
@@ -945,6 +1176,15 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#MotorVehicle -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#MotorVehicle">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#Vehicle"/>
+        <rdfs:comment>Conceptual vehicle class for motor vehicles addressed by traffic signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#MotorwayExitSign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#MotorwayExitSign">
@@ -1202,6 +1442,15 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#Obligation -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Obligation">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
+        <rdfs:comment>Conceptual class for required movements, duties, or behaviours expressed by mandatory signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#OneWaySign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#OneWaySign">
@@ -1320,6 +1569,15 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#Pedestrian -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Pedestrian">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RoadUser"/>
+        <rdfs:comment>Conceptual road-user class for pedestrians addressed by traffic signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#PedestrianCrossingSign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#PedestrianCrossingSign">
@@ -1422,11 +1680,29 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#PriorityRule -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#PriorityRule">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
+        <rdfs:comment>Conceptual class for priority rules expressed by priority signs, such as stop, give way, or priority road rules.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#PrioritySign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#PrioritySign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RegulatorySign"/>
         <rdfs:label>Priority sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Prohibition -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Prohibition">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
+        <rdfs:comment>Conceptual class for prohibited movements, entries, vehicle categories, or behaviours expressed by prohibitory signs.</rdfs:comment>
     </owl:Class>
     
 
@@ -1487,11 +1763,37 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#Restriction -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Restriction">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
+        <rdfs:comment>Conceptual class for restrictions such as limits on access, movement, dimensions, mass, or other regulated conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#RoadCondition -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadCondition">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RoadHazard"/>
+        <rdfs:comment>Conceptual class for road-surface, alignment, environmental, or traffic conditions indicated by warning signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#RoadForMotorVehiclesSign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadForMotorVehiclesSign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#SpecialRegulationSign"/>
         <rdfs:label>ROAD FOR MOTOR VEHICLES sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#RoadHazard -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadHazard">
+        <rdfs:comment>Conceptual class for hazards or dangers indicated by warning signs.</rdfs:comment>
     </owl:Class>
     
 
@@ -1531,6 +1833,14 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#RoadUser -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadUser">
+        <rdfs:comment>Conceptual class for categories of users affected by or addressed by road signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#RoadUserCategoryPanel -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadUserCategoryPanel">
@@ -1554,6 +1864,14 @@
     <owl:Class rdf:about="http://example.org/vienna-road-signs#RoundaboutWarningSign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#DangerWarningSign"/>
         <rdfs:label>Roundabout warning sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Service -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Service">
+        <rdfs:comment>Conceptual class for facilities or services indicated by service signs.</rdfs:comment>
     </owl:Class>
     
 
@@ -1667,6 +1985,14 @@
     
 
 
+    <!-- http://example.org/vienna-road-signs#TrafficRegulation -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#TrafficRegulation">
+        <rdfs:comment>Conceptual class for rules, restrictions, prohibitions, obligations, or priority instructions expressed by regulatory signs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://example.org/vienna-road-signs#TramwayStopSign -->
 
     <owl:Class rdf:about="http://example.org/vienna-road-signs#TramwayStopSign">
@@ -1709,6 +2035,15 @@
     <owl:Class rdf:about="http://example.org/vienna-road-signs#UseOfAudibleWarningDevicesProhibitedSign">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ProhibitoryOrRestrictiveSign"/>
         <rdfs:label>USE OF AUDIBLE WARNING DEVICES PROHIBITED sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vienna-road-signs#Vehicle -->
+
+    <owl:Class rdf:about="http://example.org/vienna-road-signs#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RoadUser"/>
+        <rdfs:comment>Conceptual class for vehicles to which a road sign, prohibition, restriction, or obligation may apply.</rdfs:comment>
     </owl:Class>
     
 
@@ -1968,8 +2303,9 @@
     <!-- https://example.org/mtsd/class/MTDSComplementaryKeepLeftG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSComplementaryKeepLeftG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSComplementarySignClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#PassThisSideSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSMandatoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of PassThisSideSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;complementary--keep-left--g1&quot;; observed 346 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>complementary--keep-left--g1</rdfs:label>
@@ -1980,8 +2316,9 @@
     <!-- https://example.org/mtsd/class/MTDSComplementaryKeepRightG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSComplementaryKeepRightG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSComplementarySignClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#PassThisSideSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSMandatoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of PassThisSideSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;complementary--keep-right--g1&quot;; observed 85 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>complementary--keep-right--g1</rdfs:label>
@@ -2224,7 +2561,8 @@
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationAirportG1">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#AirfieldDirectionSign"/>
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSDirectionIndicationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of AirfieldDirectionSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--airport--g1&quot;; observed 42 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--airport--g1</rdfs:label>
@@ -2236,7 +2574,8 @@
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationAirportG2">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#AirfieldDirectionSign"/>
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSDirectionIndicationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of AirfieldDirectionSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--airport--g2&quot;; observed 71 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--airport--g2</rdfs:label>
@@ -2257,7 +2596,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationBusStopG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationBusStopG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;bus-stop&quot; is treated as equivalent to the Vienna ontology class BusStopSign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--bus-stop--g1&quot;; observed 100 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--bus-stop--g1</rdfs:label>
@@ -2289,7 +2629,8 @@
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationChildrenG1">
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ChildrenSign"/>
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSWarningSignClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSWarningSignClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ChildrenSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--children--g1&quot;; observed 85 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--children--g1</rdfs:label>
@@ -2341,7 +2682,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationEndOfBuiltUpAreaG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationEndOfBuiltUpAreaG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;end-of-built-up-area&quot; is treated as equivalent to the Vienna ontology class EndOfBuiltUpAreaSign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--end-of-built-up-area--g1&quot;; observed 96 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--end-of-built-up-area--g1</rdfs:label>
@@ -2372,7 +2714,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationEndOfMotorwayG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationEndOfMotorwayG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;end-of-motorway&quot; is treated as equivalent to the Vienna ontology class EndOfMotorwaySign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--end-of-motorway--g1&quot;; observed 140 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--end-of-motorway--g1</rdfs:label>
@@ -2449,7 +2792,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationHospitalG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationHospitalG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;hospital&quot; is treated as equivalent to the Vienna ontology class HospitalSign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--hospital--g1&quot;; observed 165 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--hospital--g1</rdfs:label>
@@ -2510,7 +2854,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationMotorwayG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationMotorwayG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;motorway&quot; is treated as equivalent to the Vienna ontology class MotorwaySign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--motorway--g1&quot;; observed 271 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--motorway--g1</rdfs:label>
@@ -2521,8 +2866,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationNoParkingG3 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationNoParkingG3">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--no-parking--g3&quot;; observed 12 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--no-parking--g3</rdfs:label>
@@ -2533,8 +2879,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g1&quot;; observed 1602 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g1</rdfs:label>
@@ -2545,8 +2892,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g2&quot;; observed 90 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g2</rdfs:label>
@@ -2557,8 +2905,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG3 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG3">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g3&quot;; observed 248 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g3</rdfs:label>
@@ -2569,8 +2918,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG45 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG45">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g45&quot;; observed 27 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g45</rdfs:label>
@@ -2581,8 +2931,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG5 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG5">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g5&quot;; observed 191 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g5</rdfs:label>
@@ -2593,8 +2944,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationParkingG6 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationParkingG6">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#ParkingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of ParkingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--parking--g6&quot;; observed 78 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--parking--g6</rdfs:label>
@@ -2605,8 +2957,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationPedestriansCrossingG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationPedestriansCrossingG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#PedestrianCrossingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of PedestrianCrossingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--pedestrians-crossing--g1&quot;; observed 2187 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--pedestrians-crossing--g1</rdfs:label>
@@ -2617,8 +2970,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationPedestriansCrossingG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationPedestriansCrossingG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#PedestrianCrossingSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of PedestrianCrossingSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--pedestrians-crossing--g2&quot;; observed 85 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--pedestrians-crossing--g2</rdfs:label>
@@ -2629,8 +2983,9 @@
     <!-- https://example.org/mtsd/class/MTDSInformationRoadBumpG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationRoadBumpG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSDirectionIndicationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSWarningSignClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#UnevenRoadSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSWarningSignClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of UnevenRoadSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--road-bump--g1&quot;; observed 107 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--road-bump--g1</rdfs:label>
@@ -2695,7 +3050,8 @@
     <!-- https://example.org/mtsd/class/MTDSInformationTramBusStopG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSInformationTramBusStopG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSServiceInformationClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSSpecialRegulationClass"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSSpecialRegulationClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>Exact semantic alignment: MTDS label stem &quot;tram-bus-stop&quot; is treated as equivalent to the Vienna ontology class TramwayStopSign.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;information--tram-bus-stop--g2&quot;; observed 309 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>information--tram-bus-stop--g2</rdfs:label>
@@ -3638,8 +3994,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoLeftTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoLeftTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-left-turn--g1&quot;; observed 475 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-left-turn--g1</rdfs:label>
@@ -3650,8 +4007,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoLeftTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoLeftTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-left-turn--g2&quot;; observed 73 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-left-turn--g2</rdfs:label>
@@ -3662,8 +4020,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG3 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoLeftTurnG3">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoLeftTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoLeftTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-left-turn--g3&quot;; observed 28 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-left-turn--g3</rdfs:label>
@@ -3929,8 +4288,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoRightTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoRightTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-right-turn--g1&quot;; observed 340 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-right-turn--g1</rdfs:label>
@@ -3941,8 +4301,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoRightTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoRightTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-right-turn--g2&quot;; observed 113 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-right-turn--g2</rdfs:label>
@@ -3953,8 +4314,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG3 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoRightTurnG3">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoRightTurnSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoRightTurnSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-right-turn--g3&quot;; observed 12 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-right-turn--g3</rdfs:label>
@@ -3965,8 +4327,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG15 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG15">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSPriorityRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#StandingAndParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of StandingAndParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-stopping--g15&quot;; observed 1237 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-stopping--g15</rdfs:label>
@@ -3977,8 +4340,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSPriorityRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#StandingAndParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of StandingAndParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-stopping--g2&quot;; observed 338 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-stopping--g2</rdfs:label>
@@ -3989,8 +4353,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG4 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG4">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSPriorityRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#StandingAndParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of StandingAndParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-stopping--g4&quot;; observed 32 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-stopping--g4</rdfs:label>
@@ -4001,8 +4366,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG5 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG5">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSPriorityRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#StandingAndParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of StandingAndParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-stopping--g5&quot;; observed 174 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-stopping--g5</rdfs:label>
@@ -4013,8 +4379,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG8 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoStoppingG8">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSPriorityRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#StandingAndParkingProhibitedSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of StandingAndParkingProhibitedSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-stopping--g8&quot;; observed 42 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-stopping--g8</rdfs:label>
@@ -4085,8 +4452,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG1 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG1">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoUTurnsSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoUTurnsSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-u-turn--g1&quot;; observed 466 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-u-turn--g1</rdfs:label>
@@ -4097,8 +4465,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG2 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG2">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoUTurnsSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoUTurnsSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-u-turn--g2&quot;; observed 47 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-u-turn--g2</rdfs:label>
@@ -4109,8 +4478,9 @@
     <!-- https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG3 -->
 
     <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryNoUTurnG3">
-        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSMandatoryRegulatoryClass"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
         <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#NoUTurnsSign"/>
+        <rdfs:comment>Alignment correction: this MTDS class was reclassified under MTDSProhibitoryRegulatoryClass to match its Vienna Convention conceptual parent and avoid inheritance from disjoint categories.</rdfs:comment>
         <rdfs:comment>MTDS alignment revised: this dataset class is modelled as a subclass of NoUTurnsSign, not as owl:equivalentClass, because MTDS group labels may denote dataset-specific visual variants rather than the full Vienna-convention sign concept.</rdfs:comment>
         <rdfs:comment>MTDS dataset class generated from label &quot;regulatory--no-u-turn--g3&quot;; observed 124 annotated object(s) in the provided MTDS TTL file.</rdfs:comment>
         <rdfs:label>regulatory--no-u-turn--g3</rdfs:label>
