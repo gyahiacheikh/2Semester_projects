@@ -240,13 +240,7 @@
     <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#AdvisorySpeedSign"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:comment>Numeric advisory speed value displayed by an advisory speed sign.</rdfs:comment>
-    <rdfs:subPropertyOf>
-      <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasSpeedLimitValue">
-        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#MaximumSpeedLimitSign"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment>Numeric speed limit value displayed by a maximum speed limit sign. The literal represents the displayed value only; units may be handled separately if needed.</rdfs:comment>
-      </owl:DatatypeProperty>
-    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasSpeedValue"/>
   </owl:DatatypeProperty>
   <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryMaximumSpeedLimit10G1">
     <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
@@ -271,13 +265,7 @@
     <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#NoEntryForVehiclesExceedingMassOnOneAxleSign"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:comment>Numeric maximum axle mass value displayed by an axle-mass restriction sign.</rdfs:comment>
-    <rdfs:subPropertyOf>
-      <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasMaximumWeightValue">
-        <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#NoEntryForVehiclesExceedingLadenMassSign"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment>Numeric maximum laden mass value displayed by a mass restriction sign.</rdfs:comment>
-      </owl:DatatypeProperty>
-    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasWeightRestrictionValue"/>
   </owl:DatatypeProperty>
   <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryMaximumSpeedLimit25G2">
     <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
@@ -339,7 +327,7 @@
     <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#CompulsoryMinimumSpeedSign"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:comment>Numeric minimum speed value displayed by a compulsory minimum speed sign.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasSpeedLimitValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasSpeedValue"/>
   </owl:DatatypeProperty>
   <owl:Class rdf:about="https://example.org/mtsd/class/MTDSRegulatoryMaximumSpeedLimitLed60G1">
     <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#MTDSProhibitoryRegulatoryClass"/>
@@ -1252,7 +1240,7 @@
     <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#MaximumSpeedLimitSign"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:comment>Numeric maximum speed value displayed by a maximum speed limit sign.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasSpeedLimitValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasSpeedValue"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasImageFormat">
     <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#MTDSImage"/>
@@ -3100,7 +3088,6 @@
   </owl:Class>
   <owl:Class rdf:about="http://example.org/vienna-road-signs#RoadCondition">
     <rdfs:comment>Conceptual class for road-surface, alignment, environmental, or traffic conditions indicated by warning signs.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RoadHazard"/>
   </owl:Class>
   <owl:Class rdf:about="http://example.org/vienna-road-signs#MTDSDatasetSignClass">
     <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
@@ -3966,4 +3953,32 @@
     <rdfs:comment>Conceptual class for required movements, duties, or behaviours expressed by mandatory signs.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://example.org/vienna-road-signs#TrafficRegulation"/>
   </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/vienna-road-signs#MTDSImage">
+    <rdfs:comment>Represents an image record in the MTDS dataset containing one or more traffic-sign annotations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/vienna-road-signs#MTDSAnnotation">
+    <rdfs:comment>Represents an annotation of a traffic sign in an MTDS image, including metadata such as bounding-box coordinates.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasSpeedValue">
+    <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#RoadSign"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Generic numeric speed value associated with a road sign, used as a parent property for maximum, minimum, and advisory speed values.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasWeightRestrictionValue">
+    <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#ProhibitorySign"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Generic numeric weight-related restriction value associated with a prohibitory sign, used as a parent property for laden-mass and axle-mass restrictions.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasSpeedLimitValue">
+    <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#MaximumSpeedLimitSign"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Numeric speed limit value displayed by a maximum speed limit sign. The literal represents the displayed value only; units may be handled separately if needed.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/vienna-road-signs#hasMaximumWeightValue">
+    <rdfs:domain rdf:resource="http://example.org/vienna-road-signs#NoEntryForVehiclesExceedingLadenMassSign"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Numeric maximum laden mass value displayed by a mass restriction sign.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/vienna-road-signs#hasWeightRestrictionValue"/>
+  </owl:DatatypeProperty>
 </rdf:RDF>
