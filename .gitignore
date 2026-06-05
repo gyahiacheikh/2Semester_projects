@@ -1,1 +1,5 @@
 MTSD.ttl
+/outputs_roberta_icd
+/outputs_roberta_mean_v5
+/outputs_roberta_mean_v6
+codification_data.csv
